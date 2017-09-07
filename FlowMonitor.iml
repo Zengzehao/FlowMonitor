@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/绘制图形jar包/绘制图形jar包/gnujaxp.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/gnujaxp.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -19,7 +19,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/绘制图形jar包/绘制图形jar包/iText-2.1.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/iText-2.1.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -28,7 +28,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/绘制图形jar包/绘制图形jar包/jcommon-1.0.17.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/jcommon-1.0.17.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -37,7 +37,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/绘制图形jar包/绘制图形jar包/jfreechart-1.0.14-experimental.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/jfreechart-1.0.14-experimental.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -46,7 +46,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/绘制图形jar包/绘制图形jar包/jfreechart-1.0.14-swt.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/jfreechart-1.0.14-swt.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -55,7 +55,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/绘制图形jar包/绘制图形jar包/jfreechart-1.0.14.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/jfreechart-1.0.14.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -64,7 +64,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/绘制图形jar包/绘制图形jar包/junit.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/jpcap.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -73,7 +73,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/绘制图形jar包/绘制图形jar包/servlet.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/junit.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -82,7 +82,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/绘制图形jar包/绘制图形jar包/swtgraphics2d.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/mysql-connector-java-5.1.44-bin.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -91,7 +91,16 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://J:/大型网络项目/jpcap64/jpcap64/jpcap.jar!/" />
+          <root url="jar://$MODULE_DIR$/resouces/servlet.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/resouces/swtgraphics2d.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
