@@ -28,4 +28,13 @@ public class Protocol {
     public void setCount(Long count) {
         this.count = count;
     }
+
+    @Override
+    public String toString() {
+        return "Protocol{" +
+                "id=" + id +
+                ", ProtocolType='" + ProtocolType + '\'' +
+                ", count=" + count +
+                '}';
+    }
 }

@@ -28,4 +28,13 @@ public class IpAddress {
     public void setCount(Long count) {
         this.count = count;
     }
+
+    @Override
+    public String toString() {
+        return "IpAddress{" +
+                "id=" + id +
+                ", IpAddress='" + IpAddress + '\'' +
+                ", count=" + count +
+                '}';
+    }
 }
