@@ -29,7 +29,7 @@ public class ProtocalServiceImpl implements ProtocalService {
     @Override
     public List<Protocol> queryAllProtocal() throws Exception{
         statement = connection.createStatement();
-        
+
         return null;
     }
 }
