@@ -10,7 +10,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/entity/Protocol.java" afterPath="$PROJECT_DIR$/src/entity/Protocol.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/serivice/impl/IpAddressServiceImpl.java" afterPath="$PROJECT_DIR$/src/serivice/impl/IpAddressServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/serivice/impl/ProtocalServiceImpl.java" afterPath="$PROJECT_DIR$/src/serivice/impl/ProtocalServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/JDBCConnection.java" afterPath="$PROJECT_DIR$/src/utils/JDBCConnection.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -562,8 +561,16 @@
       <updated>1504789635294</updated>
       <workItem from="1504789639951" duration="8375000" />
       <workItem from="1504871176883" duration="41000" />
-      <workItem from="1505009845493" duration="4749000" />
+      <workItem from="1505009845493" duration="4851000" />
     </task>
+    <task id="LOCAL-00001" summary="修改 远程连接数据库">
+      <created>1505019208753</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1505019208753</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -599,7 +606,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13165000" />
+    <option name="totallyTimeSpent" value="13267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -638,6 +645,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改 远程连接数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改 远程连接数据库" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
