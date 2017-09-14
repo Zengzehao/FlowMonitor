@@ -1,5 +1,6 @@
 package flow;
 
+import entity.IpAddress;
 import jpcap.PacketReceiver;
 import jpcap.packet.ARPPacket;
 import jpcap.packet.DatalinkPacket;
@@ -8,6 +9,8 @@ import jpcap.packet.ICMPPacket;
 import jpcap.packet.Packet;
 import jpcap.packet.TCPPacket;
 import jpcap.packet.UDPPacket;
+import serivice.IpAddressService;
+import serivice.impl.IpAddressServiceImpl;
 
 /**
  * 抓包监听器,实现PacketReceiver中的方法:打印出数据包说明
@@ -18,7 +21,7 @@ class TestPacketReceiver implements PacketReceiver {
 	/**
 	 * 实现的接包方法:
 	 */
-	static int count1 = 0;
+	static int  count1 = 0;
 	static int count2 = 0;
 	static int count3 = 0;
 	static int count4 = 0;
@@ -27,11 +30,21 @@ class TestPacketReceiver implements PacketReceiver {
 
 	public void receivePacket(Packet packet) {
 		// Tcp包,在java Socket中只能得到负载数据
+		IpAddressService service = new IpAddressServiceImpl();
 		if (packet instanceof jpcap.packet.TCPPacket) {
 			TCPPacket p = (TCPPacket) packet;
 			String s = "TCPPacket:| dst_ip " + p.dst_ip + ":" + p.dst_port + "|src_ip " + p.src_ip + ":" + p.src_port
-					+ " |len: " + p.len;
+					+ " |len: " + p.len ;
 			// System.out.println(s);
+			IpAddress ipAddress = new IpAddress();
+			ipAddress.setCount(count1);
+			ipAddress.setIpAddress(p.dst_ip.toString());
+			try{
+				service.addIpAddress(ipAddress);
+			}catch (Exception e){
+				e.printStackTrace();
+			}
+
 			count1++;
 			System.out.println("Tcp包"+count1);
 		}

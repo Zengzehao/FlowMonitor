@@ -1,15 +1,15 @@
 package entity;
 
 public class IpAddress {
-    private Long id;  //主键
+    private int id;  //主键
     private String IpAddress;  //IP地址
-    private Long count;  //数量
+    private int count;  //数量
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -21,11 +21,11 @@ public class IpAddress {
         IpAddress = ipAddress;
     }
 
-    public Long getCount() {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(Long count) {
+    public void setCount(int count) {
         this.count = count;
     }
 

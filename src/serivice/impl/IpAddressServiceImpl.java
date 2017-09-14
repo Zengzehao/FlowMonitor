@@ -37,9 +37,9 @@ public class IpAddressServiceImpl implements IpAddressService {
         ResultSet result = statement.executeQuery(sql);
         while (result.next()){
             IpAddress ipAddress = new IpAddress();
-            ipAddress.setCount(result.getLong("id"));
+            ipAddress.setCount(result.getInt("id"));
             ipAddress.setIpAddress(result.getString("ipaddress"));
-            ipAddress.setCount(result.getLong("count"));
+            ipAddress.setCount(result.getInt("count"));
             ipAddresses.add(ipAddress);
         }
         return ipAddresses;

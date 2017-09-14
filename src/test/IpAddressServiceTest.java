@@ -18,7 +18,7 @@ public class IpAddressServiceTest {
     public void testInsert() throws Exception{
         IpAddress ipAddress = new IpAddress();
         ipAddress.setIpAddress("172.0.0.1");
-        ipAddress.setCount(100L);
+        ipAddress.setCount(100);
         service.addIpAddress(ipAddress);
     }
 
@@ -29,4 +29,5 @@ public class IpAddressServiceTest {
             System.out.println(ipAddress);
         }
     }
+    
 }

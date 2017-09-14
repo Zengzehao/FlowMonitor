@@ -68,5 +68,8 @@ public class jpcapPacket {
 		};
 		new Thread(rnner).start();// 启动抓包线程
 	}
+
+
+
 }
 
