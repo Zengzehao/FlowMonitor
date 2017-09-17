@@ -1,5 +1,8 @@
 package flow;
 
+import serivice.TotalService;
+import serivice.impl.TotalSericeImpl;
+
 import java.awt.event.*;
 
 import javax.swing.*;
@@ -8,6 +11,8 @@ public class   FirstFrame extends JFrame {
 
 
 	private static final long serialVersionUID = -7702775022830426851L;
+
+	private static final TotalService service = new TotalSericeImpl();
 
 	public FirstFrame() {
 
@@ -39,6 +44,12 @@ public class   FirstFrame extends JFrame {
 		jb1.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
+				//监控前清空数据库数据
+				try {
+					service.deleteAll();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
 				//启动监控
 				jpcapPacket.startCapture();
 			}

@@ -9,8 +9,8 @@ import jpcap.packet.ICMPPacket;
 import jpcap.packet.Packet;
 import jpcap.packet.TCPPacket;
 import jpcap.packet.UDPPacket;
-import serivice.IpAddressService;
-import serivice.impl.IpAddressServiceImpl;
+import serivice.*;
+import serivice.impl.*;
 
 /**
  * 抓包监听器,实现PacketReceiver中的方法:打印出数据包说明
@@ -27,20 +27,22 @@ class TestPacketReceiver implements PacketReceiver {
 	static int count4 = 0;
 	static int count5 = 0;
 	static int count6 = 0;
-
+	TCPPacketService tcpPacketService = new TCPPacketServiceImpl();
+	UDPPacketService udpPacketService = new UDPPacketServiceImpl();
+	ICMPPacketService icmpPacketService = new ICMPPacketServiceImpl();
+	ARPPacketService arpPacketService = new ARPPacketServiceImpl();
 	public void receivePacket(Packet packet) {
 		// Tcp包,在java Socket中只能得到负载数据
-		IpAddressService service = new IpAddressServiceImpl();
 		if (packet instanceof jpcap.packet.TCPPacket) {
 			TCPPacket p = (TCPPacket) packet;
 			String s = "TCPPacket:| dst_ip " + p.dst_ip + ":" + p.dst_port + "|src_ip " + p.src_ip + ":" + p.src_port
 					+ " |len: " + p.len ;
-			// System.out.println(s);
-			IpAddress ipAddress = new IpAddress();
-			ipAddress.setCount(count1);
-			ipAddress.setIpAddress(p.dst_ip.toString());
+			System.out.println(s);
+			entity.TCPPacket tcpPacket = new entity.TCPPacket(p.src_port,p.src_port,p.len);
+
+
 			try{
-				service.addIpAddress(ipAddress);
+				tcpPacketService.addTCPPacket(tcpPacket);
 			}catch (Exception e){
 				e.printStackTrace();
 			}
@@ -48,13 +50,18 @@ class TestPacketReceiver implements PacketReceiver {
 			count1++;
 			System.out.println("Tcp包"+count1);
 		}
-		
 		// UDP包,开着QQ,你就会看到:它是tcp+udp
 		else if (packet instanceof jpcap.packet.UDPPacket) {
 			UDPPacket p = (UDPPacket) packet;
 			String s = "UDPPacket:| dst_ip " + p.dst_ip + ":" + p.dst_port + "|src_ip " + p.src_ip + ":" + p.src_port
 					+ " |len: " + p.len;
 			// System.out.println(s);
+			entity.UDPPacket udpPacket = new entity.UDPPacket(p.src_port,p.dst_port,p.len);
+			try {
+				udpPacketService.addTCPPacket(udpPacket);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			count2++;
 			System.out.println("UDP包"+count2);
 		}
@@ -70,6 +77,13 @@ class TestPacketReceiver implements PacketReceiver {
 			String s = "@ @ @ ICMPPacket:| router_ip " + router_ip + " |redir_ip: " + p.redir_ip + " |mtu: " + p.mtu
 					+ " |length: " + p.len;
 			// System.out.println(s);
+
+			entity.ICMPPacket icmpPacket = new entity.ICMPPacket(p.len);
+			try {
+				icmpPacketService.addICMPPacket(icmpPacket);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			count3++;
 			System.out.println("ICMPPacket包"+count3);
 		}
@@ -81,8 +95,14 @@ class TestPacketReceiver implements PacketReceiver {
 			Object saa = p.getSenderHardwareAddress();
 			Object taa = p.getTargetHardwareAddress();
 			String s = "* * * ARPPacket:| SenderHardwareAddress " + saa + "|TargetHardwareAddress " + taa + " |len: "
-					+ p.len;
+					+ p.len ;
 			// System.out.println(s);
+			entity.ARPPacket arpPacket = new entity.ARPPacket(p.len);
+			try {
+				arpPacketService.addARPPacket(arpPacket);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			count4++;
 			
 			System.out.println("ARPPacket包"+count4);
